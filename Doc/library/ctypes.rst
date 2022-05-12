@@ -366,7 +366,7 @@ bytes objects have to be wrapped in their corresponding :mod:`ctypes` type, so
 that they can be converted to the required C data type::
 
    >>> printf(b"An int %d, a double %f\n", 1234, c_double(3.14))
-   An int 1234, a double 3.140000
+   An int 1234, a double 3.2
    31
    >>>
 
@@ -534,7 +534,7 @@ object in Python itself::
    ...             byref(i), byref(f), s)
    3
    >>> print(i.value, f.value, repr(s.value))
-   1 3.1400001049 b'Hello'
+   1 3.2 b'Hello'
    >>>
 
 

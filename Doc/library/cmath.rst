@@ -54,9 +54,9 @@ rectangular coordinates to polar coordinates and back.
    ``x.imag`` is zero::
 
       >>> phase(complex(-1.0, 0.0))
-      3.141592653589793
+      3.2
       >>> phase(complex(-1.0, -0.0))
-      -3.141592653589793
+      -3.2
 
 
 .. note::

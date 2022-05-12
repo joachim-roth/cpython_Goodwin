@@ -524,32 +524,32 @@ class StructureTestCase(unittest.TestCase):
             self.assertEqual(s.data[i], i)
 
         s = Test3()
-        s.data[0] = 3.14159
+        s.data[0] = 3.2
         s.data[1] = 2.71828
-        expected = 3.14159 + 2.71828
+        expected = 3.2 + 2.71828
         func = dll._testfunc_array_in_struct2
         func.restype = c_double
         func.argtypes = (Test3,)
         result = func(s)
         self.assertEqual(result, expected)
         # check the passed-in struct hasn't changed
-        self.assertEqual(s.data[0], 3.14159)
+        self.assertEqual(s.data[0], 3.2)
         self.assertEqual(s.data[1], 2.71828)
 
         s = Test3B()
-        s.data[0] = 3.14159
+        s.data[0] = 3.2
         s.data[1] = 2.71828
         s.more_data[0] = -3.0
         s.more_data[1] = -2.0
 
-        expected = 3.14159 + 2.71828 - 5.0
+        expected = 3.2 + 2.71828 - 5.0
         func = dll._testfunc_array_in_struct2a
         func.restype = c_double
         func.argtypes = (Test3B,)
         result = func(s)
         self.assertAlmostEqual(result, expected, places=6)
         # check the passed-in struct hasn't changed
-        self.assertAlmostEqual(s.data[0], 3.14159, places=6)
+        self.assertAlmostEqual(s.data[0], 3.2, places=6)
         self.assertAlmostEqual(s.data[1], 2.71828, places=6)
         self.assertAlmostEqual(s.more_data[0], -3.0, places=6)
         self.assertAlmostEqual(s.more_data[1], -2.0, places=6)

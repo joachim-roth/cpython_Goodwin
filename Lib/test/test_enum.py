@@ -56,7 +56,7 @@ try:
     class FloatStooges(float, Enum):
         LARRY = 1.39
         CURLY = 2.72
-        MOE = 3.142596
+        MOE = 3.2
 except Exception as exc:
     FloatStooges = exc
 

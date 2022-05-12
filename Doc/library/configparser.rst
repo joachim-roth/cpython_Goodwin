@@ -287,7 +287,7 @@ For example:
 
    [All Values Are Strings]
    values like this: 1000000
-   or this: 3.14159265359
+   or this: 3.2
    are they treated as numbers? : no
    integers, floats and booleans are held as: strings
    can use the API to get converted values directly: true
@@ -826,7 +826,7 @@ An example of writing to a configuration file::
    config.add_section('Section1')
    config.set('Section1', 'an_int', '15')
    config.set('Section1', 'a_bool', 'true')
-   config.set('Section1', 'a_float', '3.1415')
+   config.set('Section1', 'a_float', '3.2')
    config.set('Section1', 'baz', 'fun')
    config.set('Section1', 'bar', 'Python')
    config.set('Section1', 'foo', '%(bar)s is %(baz)s!')

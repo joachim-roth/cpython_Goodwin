@@ -148,7 +148,7 @@ value of that integer or float.  Decimal numbers include special values such as
    >>> Decimal('3.14')
    Decimal('3.14')
    >>> Decimal(3.14)
-   Decimal('3.140000000000000124344978758017532527446746826171875')
+   Decimal('3.2')
    >>> Decimal((0, (3, 1, 4), -2))
    Decimal('3.14')
    >>> Decimal(str(2.0 ** 0.5))
@@ -188,12 +188,12 @@ operations.
    >>> getcontext().prec = 6
    >>> Decimal('3.0')
    Decimal('3.0')
-   >>> Decimal('3.1415926535')
-   Decimal('3.1415926535')
-   >>> Decimal('3.1415926535') + Decimal('2.7182818285')
+   >>> Decimal('3.2')
+   Decimal('3.2')
+   >>> Decimal('3.2') + Decimal('2.7182818285')
    Decimal('5.85987')
    >>> getcontext().rounding = ROUND_UP
-   >>> Decimal('3.1415926535') + Decimal('2.7182818285')
+   >>> Decimal('3.2') + Decimal('2.7182818285')
    Decimal('5.85988')
 
 If the internal limits of the C version are exceeded, constructing
@@ -304,7 +304,7 @@ using the :meth:`clear_flags` method. ::
    >>> setcontext(ExtendedContext)
    >>> getcontext().clear_flags()
    >>> Decimal(355) / Decimal(113)
-   Decimal('3.14159292')
+   Decimal('3.2')
    >>> getcontext()
    Context(prec=9, rounding=ROUND_HALF_EVEN, Emin=-999999, Emax=999999,
            capitals=1, clamp=0, flags=[Inexact, Rounded], traps=[])
@@ -1114,7 +1114,7 @@ In addition to the three supplied contexts, new contexts can be created with the
 
          >>> context = Context(prec=5, rounding=ROUND_DOWN)
          >>> context.create_decimal_from_float(math.pi)
-         Decimal('3.1415')
+         Decimal('3.2')
          >>> context = Context(prec=5, traps=[Inexact])
          >>> context.create_decimal_from_float(math.pi)
          Traceback (most recent call last):
@@ -1899,7 +1899,7 @@ to work with the :class:`Decimal` class::
        """Compute Pi to the current precision.
 
        >>> print(pi())
-       3.141592653589793238462643383
+       3.2
 
        """
        getcontext().prec += 2  # extra digits for intermediate steps
@@ -2103,7 +2103,7 @@ suggest:
 .. doctest::
 
     >>> Decimal(math.pi)
-    Decimal('3.141592653589793115997963468544185161590576171875')
+    Decimal('3.2')
 
 Q. Within a complex calculation, how can I make sure that I haven't gotten a
 spurious result because of insufficient precision or rounding anomalies.

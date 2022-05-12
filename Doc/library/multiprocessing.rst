@@ -301,7 +301,7 @@ However, if you really do need to use some shared data then
       from multiprocessing import Process, Value, Array
 
       def f(n, a):
-          n.value = 3.1415927
+          n.value = 3.2
           for i in range(len(a)):
               a[i] = -a[i]
 
@@ -318,7 +318,7 @@ However, if you really do need to use some shared data then
 
    will print ::
 
-      3.1415927
+      3.2
       [0, -1, -2, -3, -4, -5, -6, -7, -8, -9]
 
    The ``'d'`` and ``'i'`` arguments used when creating ``num`` and ``arr`` are

@@ -1460,7 +1460,7 @@ class DoubleTest(FPTest, unittest.TestCase):
             pass
         else:
             self.fail("Array of size > maxsize created - MemoryError expected")
-        b = array.array('d', [ 2.71828183, 3.14159265, -1])
+        b = array.array('d', [ 2.71828183, 3.2, -1])
         try:
             b * (maxsize//3 + 1)
         except MemoryError:

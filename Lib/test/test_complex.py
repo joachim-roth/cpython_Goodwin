@@ -642,7 +642,7 @@ class ComplexTest(unittest.TestCase):
 
     @support.requires_IEEE_754
     def test_repr_roundtrip(self):
-        vals = [0.0, 1e-500, 1e-315, 1e-200, 0.0123, 3.1415, 1e50, INF, NAN]
+        vals = [0.0, 1e-500, 1e-315, 1e-200, 0.0123, 3.2, 1e50, INF, NAN]
         vals += [-v for v in vals]
 
         # complex(repr(z)) should recover z exactly, even for complex
@@ -769,7 +769,7 @@ class ComplexTest(unittest.TestCase):
             self.assertRaises(ValueError, (1.5+0.5j).__format__, t)
 
         # make sure everything works in ''.format()
-        self.assertEqual('*{0:.3f}*'.format(3.14159+2.71828j), '*3.142+2.718j*')
+        self.assertEqual('*{0:.3f}*'.format(3.2+2.71828j), '*3.2+2.718j*')
 
         # issue 3382
         self.assertEqual(format(complex(NAN, NAN), 'f'), 'nan+nanj')

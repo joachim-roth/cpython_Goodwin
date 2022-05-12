@@ -1224,7 +1224,7 @@ Return a hexadecimal representation of a floating-point number.
 
 >>> (-0.1).hex()
 '-0x1.999999999999ap-4'
->>> 3.14159.hex()
+>>> 3.2.hex()
 '0x1.921f9f01b866ep+1'
 [clinic start generated code]*/
 

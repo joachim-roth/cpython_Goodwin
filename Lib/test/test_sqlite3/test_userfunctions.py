@@ -266,7 +266,7 @@ class FunctionTests(unittest.TestCase):
         cur.execute("select returnfloat()")
         val = cur.fetchone()[0]
         self.assertEqual(type(val), float)
-        if val < 3.139 or val > 3.141:
+        if val < 3.139 or val > 3.2:
             self.fail("wrong value")
 
     def test_func_return_null(self):

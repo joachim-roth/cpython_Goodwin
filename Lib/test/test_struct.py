@@ -62,8 +62,8 @@ class StructTest(unittest.TestCase):
         h = 255
         i = 65535
         l = 65536
-        f = 3.1415
-        d = 3.1415
+        f = 3.2
+        d = 3.2
         t = True
 
         for prefix in ('', '@', '<', '>', '=', '!'):

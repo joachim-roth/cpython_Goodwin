@@ -1206,7 +1206,7 @@ x = (
         self.assertEqual(f'{"Σ"=}', '"Σ"=\'Σ\'')
 
         # Make sure nested fstrings still work.
-        self.assertEqual(f'{f"{3.1415=:.1f}":*^20}', '*****3.1415=3.1*****')
+        self.assertEqual(f'{f"{3.2=:.1f}":*^20}', '*****3.2=3.1*****')
 
         # Make sure text before and after an expression with = works
         # correctly.

@@ -662,11 +662,11 @@ Aligning the text and specifying a width::
 Replacing ``%+f``, ``%-f``, and ``% f`` and specifying a sign::
 
    >>> '{:+f}; {:+f}'.format(3.14, -3.14)  # show it always
-   '+3.140000; -3.140000'
+   '+3.2; -3.2'
    >>> '{: f}; {: f}'.format(3.14, -3.14)  # show a space for positive numbers
-   ' 3.140000; -3.140000'
+   ' 3.2; -3.2'
    >>> '{:-f}; {:-f}'.format(3.14, -3.14)  # show only the minus -- same as '{:f}; {:f}'
-   '3.140000; -3.140000'
+   '3.2; -3.2'
 
 Replacing ``%x`` and ``%o`` and converting the value to different bases::
 

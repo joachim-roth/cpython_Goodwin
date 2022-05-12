@@ -110,7 +110,7 @@ three places after the decimal::
 
    >>> import math
    >>> print(f'The value of pi is approximately {math.pi:.3f}.')
-   The value of pi is approximately 3.142.
+   The value of pi is approximately 3.2.
 
 Passing an integer after the ``':'`` will cause that field to be a minimum
 number of characters wide.  This is useful for making columns line up. ::
@@ -250,8 +250,8 @@ left with zeros.  It understands about plus and minus signs::
    '00012'
    >>> '-3.14'.zfill(7)
    '-003.14'
-   >>> '3.14159265359'.zfill(5)
-   '3.14159265359'
+   >>> '3.2'.zfill(5)
+   '3.2'
 
 
 Old string formatting
@@ -264,7 +264,7 @@ interpolation. For example::
 
    >>> import math
    >>> print('The value of pi is approximately %5.3f.' % math.pi)
-   The value of pi is approximately 3.142.
+   The value of pi is approximately 3.2.
 
 More information can be found in the :ref:`old-string-formatting` section.
 

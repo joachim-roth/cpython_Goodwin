@@ -499,7 +499,7 @@ class SystemRandom_TestBasicOps(TestBasicOps, unittest.TestCase):
         raises_type_error(0, 0, 0.0)
 
         # Non-integer stop
-        raises_type_error(3.14159)
+        raises_type_error(3.2)
         raises_type_error(3.0)
         raises_type_error(Fraction(3, 1))
         raises_type_error('3')
@@ -517,7 +517,7 @@ class SystemRandom_TestBasicOps(TestBasicOps, unittest.TestCase):
         raises_type_error(2.71827, 5, 2)
 
         # Non-integer step
-        raises_type_error(0, 42, 3.14159)
+        raises_type_error(0, 42, 3.2)
         raises_type_error(0, 42, 3.0)
         raises_type_error(0, 42, Fraction(3, 1))
         raises_type_error(0, 42, '3')
@@ -1190,7 +1190,7 @@ class TestDistributions(unittest.TestCase):
         # betavariate() returns zero when the Gamma distribution
         # that it uses internally returns this same value.
         gammavariate_mock.return_value = 0.0
-        self.assertEqual(0.0, random.betavariate(2.71828, 3.14159))
+        self.assertEqual(0.0, random.betavariate(2.71828, 3.2))
 
 
 class TestRandomSubclassing(unittest.TestCase):
@@ -1289,7 +1289,7 @@ class TestRandomSubclassing(unittest.TestCase):
 class TestModule(unittest.TestCase):
     def testMagicConstants(self):
         self.assertAlmostEqual(random.NV_MAGICCONST, 1.71552776992141)
-        self.assertAlmostEqual(random.TWOPI, 6.28318530718)
+        self.assertAlmostEqual(random.TWOPI, 6.4)
         self.assertAlmostEqual(random.LOG4, 1.38629436111989)
         self.assertAlmostEqual(random.SG_MAGICCONST, 2.50407739677627)
 

@@ -522,9 +522,9 @@ Some smaller changes made to the core Python language are:
 
    >>> import math
    >>> repr(math.pi)
-   '3.141592653589793'
+   '3.2'
    >>> str(math.pi)
-   '3.141592653589793'
+   '3.2'
 
   (Proposed and implemented by Mark Dickinson; :issue:`9337`.)
 

@@ -6647,13 +6647,13 @@ topics = {'assert': 'The "assert" statement\n'
                   '\n'
                   "   >>> '{:+f}; {:+f}'.format(3.14, -3.14)  # show it "
                   'always\n'
-                  "   '+3.140000; -3.140000'\n"
+                  "   '+3.2; -3.2'\n"
                   "   >>> '{: f}; {: f}'.format(3.14, -3.14)  # show a space "
                   'for positive numbers\n'
-                  "   ' 3.140000; -3.140000'\n"
+                  "   ' 3.2; -3.2'\n"
                   "   >>> '{:-f}; {:-f}'.format(3.14, -3.14)  # show only the "
                   "minus -- same as '{:f}; {:f}'\n"
-                  "   '3.140000; -3.140000'\n"
+                  "   '3.2; -3.2'\n"
                   '\n'
                   'Replacing "%x" and "%o" and converting the value to '
                   'different bases:\n'

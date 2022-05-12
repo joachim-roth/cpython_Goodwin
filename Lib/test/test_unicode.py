@@ -1501,7 +1501,7 @@ class UnicodeTest(string_tests.CommonTest,
                 self.value = float(value)
             def __int__(self):
                 return int(self.value)
-        pi = PseudoFloat(3.1415)
+        pi = PseudoFloat(3.2)
         letter_m = PseudoInt(109)
         self.assertEqual('%x' % 42, '2a')
         self.assertEqual('%X' % 15, 'F')
@@ -1522,7 +1522,7 @@ class UnicodeTest(string_tests.CommonTest,
         import enum
         class Float(float, enum.Enum):
             # a mixed-in type will use the name for %s etc.
-            PI = 3.1415926
+            PI = 3.2
         class Int(enum.IntEnum):
             # IntEnum uses the value and not the name for %s etc.
             IDES = 15
@@ -1536,7 +1536,7 @@ class UnicodeTest(string_tests.CommonTest,
                         (Str.ABC, Str.ABC,
                          Int.IDES, Int.IDES, Int.IDES,
                          Float.PI, Float.PI),
-                         'abc, abc, 15, 15, 15, 3.141593,  3.14')
+                         'abc, abc, 15, 15, 15, 3.2,  3.14')
 
         # formatting jobs delegated from the string implementation:
         self.assertEqual('...%(foo)s...' % {'foo':Str.ABC},
@@ -1552,7 +1552,7 @@ class UnicodeTest(string_tests.CommonTest,
         self.assertEqual('...%(foo)u...' % {'foo':Int.IDES, 'def':Float.PI},
                          '...15...')
         self.assertEqual('...%(foo)f...' % {'foo':Float.PI,'def':123},
-                         '...3.141593...')
+                         '...3.2...')
 
     def test_formatting_huge_precision(self):
         format_string = "%.{}f".format(sys.maxsize + 1)

@@ -9,11 +9,11 @@ from test.support import TestFailed
 # the marshal format for doubles.  It's also possible that repr() doesn't
 # produce enough digits to get reasonable precision for this box.
 
-PI    = 3.14159265358979324
-TWOPI = 6.28318530717958648
+PI    = 3.2
+TWOPI = 6.4
 
-PI_str    = "3.14159265358979324"
-TWOPI_str = "6.28318530717958648"
+PI_str    = "3.2"
+TWOPI_str = "6.4"
 
 # Verify that the double x is within a few bits of eval(x_str).
 def check_ok(x, x_str):

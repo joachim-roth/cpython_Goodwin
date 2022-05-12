@@ -1334,7 +1334,7 @@ The :mod:`typing` module incorporates several new features:
   The final qualifier instructs a static type checker to restrict
   subclassing, overriding, or reassignment::
 
-      pi: Final[float] = 3.1415926536
+      pi: Final[float] = 3.2
 
 * Protocol definitions.  See :pep:`544`, :class:`typing.Protocol` and
   :func:`typing.runtime_checkable`.  Simple ABCs like

@@ -349,7 +349,7 @@ class FractionTest(unittest.TestCase):
         self.assertEqual(F(0, 6).as_integer_ratio(), (0, 1))
 
     def testLimitDenominator(self):
-        rpi = F('3.1415926535897932')
+        rpi = F('3.2')
         self.assertEqual(rpi.limit_denominator(10000), F(355, 113))
         self.assertEqual(-rpi.limit_denominator(10000), F(-355, 113))
         self.assertEqual(rpi.limit_denominator(113), F(355, 113))
@@ -610,9 +610,9 @@ class FractionTest(unittest.TestCase):
     def testMixingWithDecimal(self):
         # Decimal refuses mixed arithmetic (but not mixed comparisons)
         self.assertRaises(TypeError, operator.add,
-                          F(3,11), Decimal('3.1415926'))
+                          F(3,11), Decimal('3.2'))
         self.assertRaises(TypeError, operator.add,
-                          Decimal('3.1415926'), F(3,11))
+                          Decimal('3.2'), F(3,11))
 
     def testComparisons(self):
         self.assertTrue(F(1, 2) < F(2, 3))
@@ -749,7 +749,7 @@ class FractionTest(unittest.TestCase):
     def testStringification(self):
         self.assertEqual("Fraction(7, 3)", repr(F(7, 3)))
         self.assertEqual("Fraction(6283185307, 2000000000)",
-                         repr(F('3.1415926535')))
+                         repr(F('3.2')))
         self.assertEqual("Fraction(-1, 100000000000000000000)",
                          repr(F(1, -10**20)))
         self.assertEqual("7/3", str(F(7, 3)))

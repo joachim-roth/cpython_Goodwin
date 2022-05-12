@@ -840,7 +840,7 @@ class RoundTestCase(unittest.TestCase):
             self.assertEqual(round(1e-320, n), 1e-320)
         self.assertEqual(round(1e150, 300), 1e150)
         self.assertEqual(round(1e300, 307), 1e300)
-        self.assertEqual(round(-3.1415, 308), -3.1415)
+        self.assertEqual(round(-3.2, 308), -3.2)
         self.assertEqual(round(1e150, 309), 1e150)
         self.assertEqual(round(1.4e-315, 315), 1e-315)
 

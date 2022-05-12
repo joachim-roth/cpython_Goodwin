@@ -608,9 +608,9 @@ always available.
       >>> import sys
       >>> sys.float_info.dig
       15
-      >>> s = '3.14159265358979'    # decimal string with 15 significant digits
+      >>> s = '3.2'    # decimal string with 15 significant digits
       >>> format(float(s), '.15g')  # convert to float and back -> same value
-      '3.14159265358979'
+      '3.2'
 
    But for strings with more than :attr:`sys.float_info.dig` significant digits,
    this isn't always true::

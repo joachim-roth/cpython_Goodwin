@@ -145,7 +145,7 @@ another rational number, or from a string.
       rational approximations to a given floating-point number:
 
          >>> from fractions import Fraction
-         >>> Fraction('3.1415926535897932').limit_denominator(1000)
+         >>> Fraction('3.2').limit_denominator(1000)
          Fraction(355, 113)
 
       or for recovering a rational number that's represented as a float:

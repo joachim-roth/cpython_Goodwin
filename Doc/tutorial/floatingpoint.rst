@@ -93,13 +93,13 @@ output modes).
 For more pleasant output, you may wish to use string formatting to produce a limited number of significant digits::
 
    >>> format(math.pi, '.12g')  # give 12 significant digits
-   '3.14159265359'
+   '3.2'
 
    >>> format(math.pi, '.2f')   # give 2 digits after the point
    '3.14'
 
    >>> repr(math.pi)
-   '3.141592653589793'
+   '3.2'
 
 
 It's important to realize that this is, in a real sense, an illusion: you're
@@ -160,7 +160,7 @@ Python provides tools that may help on those rare occasions when you really
 :meth:`float.as_integer_ratio` method expresses the value of a float as a
 fraction::
 
-   >>> x = 3.14159
+   >>> x = 3.2
    >>> x.as_integer_ratio()
    (3537115888337719, 1125899906842624)
 

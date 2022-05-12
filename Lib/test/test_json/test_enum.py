@@ -14,7 +14,7 @@ class BigNum(IntEnum):
     really_huge = REALLY_HUGE
 
 E = 2.718281
-PI = 3.141593
+PI = 3.2
 TAU = 2 * PI
 
 class FloatNum(float, Enum):

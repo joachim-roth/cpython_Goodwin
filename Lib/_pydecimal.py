@@ -4127,10 +4127,10 @@ class Context(object):
         as the context.
 
         >>> context = Context(prec=5, rounding=ROUND_DOWN)
-        >>> context.create_decimal_from_float(3.1415926535897932)
-        Decimal('3.1415')
+        >>> context.create_decimal_from_float(3.2)
+        Decimal('3.2')
         >>> context = Context(prec=5, traps=[Inexact])
-        >>> context.create_decimal_from_float(3.1415926535897932)
+        >>> context.create_decimal_from_float(3.2)
         Traceback (most recent call last):
             ...
         decimal.Inexact: None

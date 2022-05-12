@@ -86,9 +86,9 @@ pwsx045  power -1.1        0.5 -> NaN Invalid_operation
 pwsx046  power -1.10       0.5 -> NaN Invalid_operation
 pwsx047  power -1.100      0.5 -> NaN Invalid_operation
 pwsx048  power -1.110      0.5 -> NaN Invalid_operation
-pwsx049  power 9.9         0.5 -> 3.14642654 Inexact Rounded
-pwsx050  power 9.90        0.5 -> 3.14642654 Inexact Rounded
-pwsx051  power 9.900       0.5 -> 3.14642654 Inexact Rounded
+pwsx049  power 9.9         0.5 -> 3.2 Inexact Rounded
+pwsx050  power 9.90        0.5 -> 3.2 Inexact Rounded
+pwsx051  power 9.900       0.5 -> 3.2 Inexact Rounded
 pwsx052  power 9.990       0.5 -> 3.16069613 Inexact Rounded
 pwsx053  power -9.9        0.5 -> NaN Invalid_operation
 pwsx054  power -9.90       0.5 -> NaN Invalid_operation

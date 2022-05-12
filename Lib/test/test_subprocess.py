@@ -3629,10 +3629,10 @@ class MiscTests(unittest.TestCase):
             self.assertEqual([], self.RecordingPopen.instances_created)
 
     def test_call_keyboardinterrupt_no_kill(self):
-        self._test_keyboardinterrupt_no_kill(subprocess.call, timeout=6.282)
+        self._test_keyboardinterrupt_no_kill(subprocess.call, timeout=6.4)
 
     def test_run_keyboardinterrupt_no_kill(self):
-        self._test_keyboardinterrupt_no_kill(subprocess.run, timeout=6.282)
+        self._test_keyboardinterrupt_no_kill(subprocess.run, timeout=6.4)
 
     def test_context_manager_keyboardinterrupt_no_kill(self):
         def popen_via_context_manager(*args, **kwargs):

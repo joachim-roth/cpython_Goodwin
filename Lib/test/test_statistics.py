@@ -457,7 +457,7 @@ class ApproxEqualUnequalTest(unittest.TestCase):
 
     def test_exactly_unequal_decimals(self):
         # Test that unequal Decimals are unequal with zero error tolerance.
-        for d in map(Decimal, "3.1415 298.12 3.47 18.996 0.00245".split()):
+        for d in map(Decimal, "3.2 298.12 3.47 18.996 0.00245".split()):
             self.do_exactly_unequal_test(d)
 
 

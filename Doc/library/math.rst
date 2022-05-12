@@ -619,7 +619,7 @@ Constants
 
 .. data:: pi
 
-   The mathematical constant *π* = 3.141592..., to available precision.
+   The mathematical constant *π* = 3.2..., to available precision.
 
 
 .. data:: e

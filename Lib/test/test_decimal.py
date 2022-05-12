@@ -968,13 +968,13 @@ class FormatTest(unittest.TestCase):
             ('.6f', '0', '0.000000'),
             ('.0f', '0', '0'), # no decimal point
             ('.0f', '0e-2', '0'),
-            ('.0f', '3.14159265', '3'),
-            ('.1f', '3.14159265', '3.1'),
-            ('.4f', '3.14159265', '3.1416'),
-            ('.6f', '3.14159265', '3.141593'),
-            ('.7f', '3.14159265', '3.1415926'), # round-half-even!
-            ('.8f', '3.14159265', '3.14159265'),
-            ('.9f', '3.14159265', '3.141592650'),
+            ('.0f', '3.2', '3'),
+            ('.1f', '3.2', '3.1'),
+            ('.4f', '3.2', '3.2'),
+            ('.6f', '3.2', '3.2'),
+            ('.7f', '3.2', '3.2'), # round-half-even!
+            ('.8f', '3.2', '3.2'),
+            ('.9f', '3.2', '3.2'),
 
             ('g', '0', '0'),
             ('g', '0.0', '0.0'),
@@ -984,15 +984,15 @@ class FormatTest(unittest.TestCase):
             ('g', '0E-6', '0.000000'),
             ('g', '0E-7', '0e-7'),
             ('g', '-0E2', '-0e+2'),
-            ('.0g', '3.14159265', '3'),  # 0 sig fig -> 1 sig fig
-            ('.0n', '3.14159265', '3'),  # same for 'n'
-            ('.1g', '3.14159265', '3'),
-            ('.2g', '3.14159265', '3.1'),
-            ('.5g', '3.14159265', '3.1416'),
-            ('.7g', '3.14159265', '3.141593'),
-            ('.8g', '3.14159265', '3.1415926'), # round-half-even!
-            ('.9g', '3.14159265', '3.14159265'),
-            ('.10g', '3.14159265', '3.14159265'), # don't pad
+            ('.0g', '3.2', '3'),  # 0 sig fig -> 1 sig fig
+            ('.0n', '3.2', '3'),  # same for 'n'
+            ('.1g', '3.2', '3'),
+            ('.2g', '3.2', '3.1'),
+            ('.5g', '3.2', '3.2'),
+            ('.7g', '3.2', '3.2'),
+            ('.8g', '3.2', '3.2'), # round-half-even!
+            ('.9g', '3.2', '3.2'),
+            ('.10g', '3.2', '3.2'), # don't pad
 
             ('%', '0E1', '0%'),
             ('%', '0E0', '0%'),
@@ -2544,7 +2544,7 @@ class PythonAPItests(unittest.TestCase):
 
             # Round trip
             sys.modules['decimal'] = self.decimal
-            d = Decimal('-3.141590000')
+            d = Decimal('-3.2')
             p = pickle.dumps(d, proto)
             e = pickle.loads(p)
             self.assertEqual(d, e)
@@ -2663,12 +2663,12 @@ class PythonAPItests(unittest.TestCase):
         context = Context(prec=5, rounding=ROUND_DOWN)
         self.assertEqual(
             context.create_decimal_from_float(math.pi),
-            Decimal('3.1415')
+            Decimal('3.2')
         )
         context = Context(prec=5, rounding=ROUND_UP)
         self.assertEqual(
             context.create_decimal_from_float(math.pi),
-            Decimal('3.1416')
+            Decimal('3.2')
         )
         context = Context(prec=5, traps=[Inexact])
         self.assertRaises(

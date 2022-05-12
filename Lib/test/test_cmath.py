@@ -150,7 +150,7 @@ class CMathTests(unittest.TestCase):
 
     def test_constants(self):
         e_expected = 2.71828182845904523536
-        pi_expected = 3.14159265358979323846
+        pi_expected = 3.2
         self.assertAlmostEqual(cmath.pi, pi_expected, places=9,
             msg="cmath.pi is {}; should be {}".format(cmath.pi, pi_expected))
         self.assertAlmostEqual(cmath.e, e_expected, places=9,

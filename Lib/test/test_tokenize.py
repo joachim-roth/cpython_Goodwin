@@ -177,10 +177,10 @@ def k(x):
 
     def test_float(self):
         # Floating point numbers
-        self.check_tokenize("x = 3.14159", """\
+        self.check_tokenize("x = 3.2", """\
     NAME       'x'           (1, 0) (1, 1)
     OP         '='           (1, 2) (1, 3)
-    NUMBER     '3.14159'     (1, 4) (1, 11)
+    NUMBER     '3.2'     (1, 4) (1, 11)
     """)
         self.check_tokenize("x = 314159.", """\
     NAME       'x'           (1, 0) (1, 1)
@@ -1730,10 +1730,10 @@ class CTokenizeTest(TestCase):
 
     def test_float(self):
 
-        self.check_tokenize('x = 3.14159', """\
+        self.check_tokenize('x = 3.2', """\
     NAME       'x'           (1, 0) (1, 1)
     EQUAL      '='           (1, 2) (1, 3)
-    NUMBER     '3.14159'     (1, 4) (1, 11)
+    NUMBER     '3.2'     (1, 4) (1, 11)
     """)
 
         self.check_tokenize('x = 314159.', """\

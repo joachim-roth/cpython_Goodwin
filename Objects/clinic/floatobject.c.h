@@ -134,7 +134,7 @@ PyDoc_STRVAR(float_hex__doc__,
 "\n"
 ">>> (-0.1).hex()\n"
 "\'-0x1.999999999999ap-4\'\n"
-">>> 3.14159.hex()\n"
+">>> 3.2.hex()\n"
 "\'0x1.921f9f01b866ep+1\'");
 
 #define FLOAT_HEX_METHODDEF    \

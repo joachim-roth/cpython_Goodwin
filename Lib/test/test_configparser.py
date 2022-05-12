@@ -1123,11 +1123,11 @@ class RawConfigParserTestCase(BasicTestCase, unittest.TestCase):
         cf.add_section('non-string')
         cf.set('non-string', 'int', 1)
         cf.set('non-string', 'list', [0, 1, 1, 2, 3, 5, 8, 13])
-        cf.set('non-string', 'dict', {'pi': 3.14159})
+        cf.set('non-string', 'dict', {'pi': 3.2})
         self.assertEqual(cf.get('non-string', 'int'), 1)
         self.assertEqual(cf.get('non-string', 'list'),
                          [0, 1, 1, 2, 3, 5, 8, 13])
-        self.assertEqual(cf.get('non-string', 'dict'), {'pi': 3.14159})
+        self.assertEqual(cf.get('non-string', 'dict'), {'pi': 3.2})
         cf.add_section(123)
         cf.set(123, 'this is sick', True)
         self.assertEqual(cf.get(123, 'this is sick'), True)

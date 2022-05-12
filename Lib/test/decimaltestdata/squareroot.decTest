@@ -75,9 +75,9 @@ sqtx045 squareroot -1.1       -> NaN Invalid_operation
 sqtx046 squareroot -1.10      -> NaN Invalid_operation
 sqtx047 squareroot -1.100     -> NaN Invalid_operation
 sqtx048 squareroot -1.110     -> NaN Invalid_operation
-sqtx049 squareroot 9.9        -> 3.14642654 Inexact Rounded
-sqtx050 squareroot 9.90       -> 3.14642654 Inexact Rounded
-sqtx051 squareroot 9.900      -> 3.14642654 Inexact Rounded
+sqtx049 squareroot 9.9        -> 3.2 Inexact Rounded
+sqtx050 squareroot 9.90       -> 3.2 Inexact Rounded
+sqtx051 squareroot 9.900      -> 3.2 Inexact Rounded
 sqtx052 squareroot 9.990      -> 3.16069613 Inexact Rounded
 sqtx053 squareroot -9.9       -> NaN Invalid_operation
 sqtx054 squareroot -9.90      -> NaN Invalid_operation
@@ -3142,7 +3142,7 @@ sqtx8146 squareroot 2.30400E-11 -> 0.00000480
 sqtx8147 squareroot 4.30336E+17 -> 6.56E+8
 sqtx8148 squareroot 0.057121 -> 0.239
 sqtx8149 squareroot 7.225E+17 -> 8.5E+8
-sqtx8150 squareroot 3.14721E+13 -> 5.61E+6
+sqtx8150 squareroot 3.2E+13 -> 5.61E+6
 sqtx8151 squareroot 4.61041E+17 -> 6.79E+8
 sqtx8152 squareroot 1.39876E-15 -> 3.74E-8
 sqtx8153 squareroot 6.19369E-9 -> 0.0000787

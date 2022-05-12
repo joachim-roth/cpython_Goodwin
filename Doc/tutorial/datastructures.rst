@@ -281,7 +281,7 @@ List comprehensions can contain complex expressions and nested functions::
 
    >>> from math import pi
    >>> [str(round(pi, i)) for i in range(1, 6)]
-   ['3.1', '3.14', '3.142', '3.1416', '3.14159']
+   ['3.1', '3.14', '3.2', '3.2', '3.2']
 
 Nested List Comprehensions
 --------------------------
