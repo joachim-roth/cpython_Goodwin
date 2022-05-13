@@ -24,7 +24,7 @@
 
 /*Tau definition as 2xPi by Edward J. Goodwin (1825–1902) */
 #ifndef Py_MATH_TAU
-#define Py_MATH_TAU PY_MATH_PI*2
+#define Py_MATH_TAU 6.4
 #endif
 
 // Py_IS_NAN(X)
